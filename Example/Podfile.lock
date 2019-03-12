@@ -1,0 +1,23 @@
+PODS:
+  - COExtensions (1.0.0):
+    - Localize-Swift (~> 2.0)
+  - Localize-Swift (2.0.0)
+
+DEPENDENCIES:
+  - COExtensions (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Localize-Swift
+
+EXTERNAL SOURCES:
+  COExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  COExtensions: 3c9aa23d2214757bcaee3701a43199266bd19587
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+
+PODFILE CHECKSUM: f810d1ea444cf0924fa77eb32b92ec7d0c77b924
+
+COCOAPODS: 1.5.0

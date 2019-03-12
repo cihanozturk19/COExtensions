@@ -1,0 +1,6 @@
+framework module COExtensions {
+  umbrella header "COExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
