@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'COExtensions'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of COExtensions.'
+  s.version          = '1.0.0'
+  s.summary          = 'This extensions make life easier for you.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This extensions make life easier for you.
                        DESC
 
   s.homepage         = 'https://github.com/cihanozturk19/COExtensions'
@@ -32,11 +32,15 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'COExtensions/Classes/**/*'
   
+  # s.platform     = :ios, '11.0'
+  # s.swift_version = '4.2'
+  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  
   # s.resource_bundles = {
   #   'COExtensions' => ['COExtensions/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  s.dependency 'Localize-Swift', '~> 2.0'
 end
