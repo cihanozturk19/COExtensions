@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'COExtensions_Example' do
+  pod 'COExtensions', :path => '../'
+
+  target 'COExtensions_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
