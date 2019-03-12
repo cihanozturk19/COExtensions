@@ -1,4 +1,5 @@
 use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'COExtensions_Example' do
   pod 'COExtensions', :path => '../'
