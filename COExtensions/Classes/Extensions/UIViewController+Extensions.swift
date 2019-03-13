@@ -11,12 +11,12 @@ import UIKit
 
 extension UIViewController{
     
-    func isNavigationBarHidden(isHidden:Bool){
+   open func isNavigationBarHidden(isHidden:Bool){
         self.navigationController?.setNavigationBarHidden(isHidden, animated: false)
     }
 }
 extension UIViewController {
-    static func instantiateFromNib() -> Self {
+    public static func instantiateFromNib() -> Self {
         func instantiateFromNib<T: UIViewController>(_ viewType: T.Type) -> T {
             return T.init(nibName: T.className, bundle: nil)
             //String(describing: T.self) = T.className
@@ -25,7 +25,7 @@ extension UIViewController {
         return instantiateFromNib(self)
     }
     
-    static func instantiateFromLoginStoryBoard() -> Self {
+    public static func instantiateFromLoginStoryBoard() -> Self {
         
         func instantiateFromLoginStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             
@@ -34,7 +34,7 @@ extension UIViewController {
         return instantiateFromLoginStoryBoard(self)
     }
     
-    static func instantiateFromMainStoryBoard() -> Self {
+    public static func instantiateFromMainStoryBoard() -> Self {
         
         func instantiateFromMainStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             
@@ -43,7 +43,7 @@ extension UIViewController {
         return instantiateFromMainStoryBoard(self)
     }
     
-    static func instantiateFromDashboardStoryBoard() -> Self {
+    public static func instantiateFromDashboardStoryBoard() -> Self {
         
         func instantiateFromDashboardStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             return UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: T.className) as! T
@@ -51,7 +51,7 @@ extension UIViewController {
         return instantiateFromDashboardStoryBoard(self)
     }
     
-    static func instantiateFromAuthenticationStoryBoard() -> Self {
+    public static func instantiateFromAuthenticationStoryBoard() -> Self {
         
         func instantiateFromAuthenticationStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             
@@ -60,7 +60,7 @@ extension UIViewController {
         return instantiateFromAuthenticationStoryBoard(self)
     }
     
-    static func instantiateFromTemplatesStoryBoard() -> Self {
+    public static func instantiateFromTemplatesStoryBoard() -> Self {
         
         func instantiateFromTemplatesStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             
@@ -69,7 +69,7 @@ extension UIViewController {
         return instantiateFromTemplatesStoryBoard(self)
     }
     
-    static func instantiateFromPopupStoryBoard() -> Self {
+    public static func instantiateFromPopupStoryBoard() -> Self {
         
         func instantiateFromPopupStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             
@@ -78,7 +78,7 @@ extension UIViewController {
         return instantiateFromPopupStoryBoard(self)
     }
     
-    static func instantiateFromTabBarStoryBoard() -> Self {
+    public static func instantiateFromTabBarStoryBoard() -> Self {
         
         func instantiateFromTabBarStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             
@@ -87,7 +87,7 @@ extension UIViewController {
         return instantiateFromTabBarStoryBoard(self)
     }
     
-    static func instantiateFromStoryBoard(_ storyBoardName:String) -> Self {
+    public static func instantiateFromStoryBoard(_ storyBoardName:String) -> Self {
         
         func instantiateFromStoryBoard<T:UIViewController>(_ viewType: T.Type) -> T {
             
