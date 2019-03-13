@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 extension UITextField {
-    func loadDropdownData(data: [String]) {
+    open func loadDropdownData(data: [String]) {
         self.inputView = DataPickerView(pickerData: data, dropdownField: self)
     }
     
-    func loadDropdownData(data: [String], onSelect selectionHandler : @escaping (_ selectedText: String) -> Void) {
+    open func loadDropdownData(data: [String], onSelect selectionHandler : @escaping (_ selectedText: String) -> Void) {
         self.inputView = DataPickerView(pickerData: data, dropdownField: self, onSelect: selectionHandler)
     }
 }

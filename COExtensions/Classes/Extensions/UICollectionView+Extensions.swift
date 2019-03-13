@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UICollectionView{
+public extension UICollectionView{
         
     func cellWithIdentifierAndIndexPath<T:UICollectionViewCell>(cell:T.Type,indexPath:IndexPath) -> T {
         
@@ -17,7 +17,7 @@ extension UICollectionView{
         return genericCell
     }
 }
-extension UICollectionView {
+public extension UICollectionView {
     
     func setEmptyMessage(_ message: String,font:UIFont) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))

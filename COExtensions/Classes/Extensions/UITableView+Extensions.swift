@@ -34,7 +34,7 @@ public extension UITableView {
     }
     
 }
-extension UITableView{
+public extension UITableView{
     
     func registerCell<T:UITableViewCell>(cell:T.Type){
         

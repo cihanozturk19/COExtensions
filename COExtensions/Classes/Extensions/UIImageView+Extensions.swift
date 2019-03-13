@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIImageView {
+public extension UIImageView {
     
     public func maskCircle(anyImage: UIImage) {
         self.contentMode = UIView.ContentMode.scaleAspectFill

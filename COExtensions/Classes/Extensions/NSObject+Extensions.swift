@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension NSObject {
+public extension NSObject {
     public var className: String {
         return type(of: self).className
     }

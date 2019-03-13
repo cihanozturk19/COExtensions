@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UINavigationItem{
+public extension UINavigationItem{
     
     @available(iOS 9.0, *)
     fileprivate func customBarButtonItem(_ width: CGFloat, _ height: CGFloat, _ icon: String, _ target: UIViewController, _ action: Selector)->UIBarButtonItem {

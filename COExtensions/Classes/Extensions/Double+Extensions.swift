@@ -7,7 +7,7 @@
 //
 import Foundation
 
-extension Double {
+public extension Double {
     /// EZSE: Converts Double to String
     public var toString: String { return String(self) }
 

@@ -23,7 +23,7 @@ public extension UIBarButtonItem {
     }
     
 }
-extension UIBarButtonItem{
+public extension UIBarButtonItem{
     
     func getCustomUIBarButtonItem(_ icon: String, width:CGFloat, height:CGFloat, target: UIViewController, action: Selector) -> UIBarButtonItem {
         

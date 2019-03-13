@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UISegmentedControl {
+public extension UISegmentedControl {
     
     func customFont(font:UIFont? = nil){
         
