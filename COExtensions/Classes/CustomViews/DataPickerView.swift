@@ -14,7 +14,8 @@ class DataPickerView : UIPickerView, UIPickerViewDataSource, UIPickerViewDelegat
     var pickerData : [String]!
     var pickerTextField : UITextField!
     var selectionHandler : ((_ selectedText: String) -> Void)?
-    
+    var defaultText:String?
+
     init(pickerData: [String], dropdownField: UITextField) {
         super.init(frame: CGRect.zero)
         
@@ -26,7 +27,12 @@ class DataPickerView : UIPickerView, UIPickerViewDataSource, UIPickerViewDelegat
         
         DispatchQueue.main.async {
             if pickerData.count > 0 {
-                self.pickerTextField.text = nil//self.pickerData[0]
+                if self.defaultText != nil{
+                    self.pickerTextField.text = self.defaultText
+                }
+                else{
+                    self.pickerTextField.text = nil//self.pickerData[0]
+                }
                 self.pickerTextField.isEnabled = true
             }
             else {
@@ -46,6 +52,14 @@ class DataPickerView : UIPickerView, UIPickerViewDataSource, UIPickerViewDelegat
         self.init(pickerData: pickerData, dropdownField: dropdownField)
         self.selectionHandler = selectionHandler
 
+    }
+    
+    convenience init(pickerData: [String], dropdownField: UITextField, defaultText:String, onSelect selectionHandler : @escaping (_ selectedText: String) -> Void) {
+        
+        self.init(pickerData: pickerData, dropdownField: dropdownField)
+        self.selectionHandler = selectionHandler
+        self.defaultText = defaultText
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
