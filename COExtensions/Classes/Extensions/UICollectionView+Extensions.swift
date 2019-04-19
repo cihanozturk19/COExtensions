@@ -35,3 +35,16 @@ public extension UICollectionView {
         self.backgroundView = nil
     }
 }
+public extension UICollectionView{
+    
+    func addSpinner(_ color:UIColor? = nil){
+        
+        Spinner.shared.color = color ?? UIColor.gray
+        Spinner.shared.startAnimating()
+        self.backgroundView = Spinner.shared
+    }
+    func removeSpinner(){
+        Spinner.shared.stopAnimating()
+        self.backgroundView = nil
+    }
+}

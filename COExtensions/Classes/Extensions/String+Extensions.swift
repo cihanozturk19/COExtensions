@@ -52,4 +52,18 @@ public extension String{
     }
 }
 
-
+public extension String {
+    
+    func setNumbericDateDateString(_ dateString:String)->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.setDefaultDateFormat()
+        return dateFormatter.timeSince(from: dateFormatter.getDateFromString(dateString: (dateString.removeTFromDate().removeSSSFromDate())))
+    }
+    func removeTFromDate()->String{
+        return self.replacingOccurrences(of: "T", with: " ")
+    }
+    func removeSSSFromDate()->String{
+        let index = self.index(of: ".")!
+        return String(self.prefix(upTo: index))
+    }
+}

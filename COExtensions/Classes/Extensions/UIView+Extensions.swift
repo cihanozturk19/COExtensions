@@ -106,7 +106,37 @@ public extension UIView {
         self.layer.masksToBounds = maskToBounds
     }
     
-    
+    func addShadowBezierPath(_ width:CGFloat=0, height:CGFloat=2.0, Opacidade:Float=0.5, maskToBounds:Bool=false, radius:CGFloat=2.0){
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: width, height: height)
+        layer.shadowRadius = radius
+        layer.shadowOpacity = Opacidade
+        layer.masksToBounds = false
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: self.layer.cornerRadius).cgPath
+    }
+    /*
+     extension UIView{
+     
+     func addShadow(){
+     self.layer.shadowOffset =  CGSize(width: 0, height: 1)   // CGSizeMake(0, 1)
+     self.layer.shadowColor = UIColor.black.cgColor
+     self.layer.shadowRadius = 1.5
+     self.layer.shadowOpacity = 0.30
+     self.layer.cornerRadius = 1
+     self.clipsToBounds = true
+     self.layer.masksToBounds = false
+     }
+     func addShadow(_ offset:CGSize, color:UIColor, radius:CGFloat, opacity:Float, cornerRadius:CGFloat, clipBounds:Bool, maskBounds:Bool){
+     self.layer.shadowOffset =  offset
+     self.layer.shadowColor = color.cgColor
+     self.layer.shadowRadius = radius
+     self.layer.shadowOpacity = opacity
+     self.layer.cornerRadius = cornerRadius
+     self.clipsToBounds = clipBounds
+     self.layer.masksToBounds = maskBounds
+     }
+     }
+     */
     
 }
 

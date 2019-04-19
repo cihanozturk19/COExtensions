@@ -21,6 +21,18 @@
 		326BBE829F5E7F98C017C839268E8E96 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AECD3DD4FB501C8113FB8E09A7F7F /* UITableView+Extensions.swift */; };
 		49B5F76232EA3056D7208F8FAE5B906E /* Localize-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D55960024360BD65FC019B86563FD86 /* Localize-Swift-dummy.m */; };
 		5639114DC2DE33232CEC6B8504E73194 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544C75A96A01C8455BD8796BD73384B /* UIKit.framework */; };
+		5A5BB5C82269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5C72269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift */; };
+		5A5BB5C92269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5C72269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift */; };
+		5A5BB5CA2269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5C72269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift */; };
+		5A5BB5CB2269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5C72269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift */; };
+		5A5BB5CD2269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5CC2269ED610036252E /* UICollectionViewCell+Extensions.swift */; };
+		5A5BB5CE2269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5CC2269ED610036252E /* UICollectionViewCell+Extensions.swift */; };
+		5A5BB5CF2269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5CC2269ED610036252E /* UICollectionViewCell+Extensions.swift */; };
+		5A5BB5D02269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5CC2269ED610036252E /* UICollectionViewCell+Extensions.swift */; };
+		5A5BB5D22269F1490036252E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5D12269F1490036252E /* DateFormatter+Extensions.swift */; };
+		5A5BB5D32269F1490036252E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5D12269F1490036252E /* DateFormatter+Extensions.swift */; };
+		5A5BB5D42269F1490036252E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5D12269F1490036252E /* DateFormatter+Extensions.swift */; };
+		5A5BB5D52269F1490036252E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BB5D12269F1490036252E /* DateFormatter+Extensions.swift */; };
 		5A8D3804223B85F5007F722F /* UIScrollView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D3803223B85F5007F722F /* UIScrollView + Extensions.swift */; };
 		5C3F0DAB5D79F6863DE959C19F7EF40C /* DataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581FB33AD4C827DF04F678E12154B6A /* DataPickerView.swift */; };
 		63F5F3E582A7A7B09D874DC0CBBE6B1C /* String+LocalizedBundleTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD45CC897871D532BD4A0A8F71B21506 /* String+LocalizedBundleTableName.swift */; };
@@ -100,6 +112,9 @@
 		5548644D49B94906C10AD7A1BEC089FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5548CC1B93FA9A428D73BF730E0E117E /* Int+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		57670189002E2417C3750F708DEE45BC /* Pods-COExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-COExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5A5BB5C72269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extensions.swift"; sourceTree = "<group>"; };
+		5A5BB5CC2269ED610036252E /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		5A5BB5D12269F1490036252E /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		5A8D3803223B85F5007F722F /* UIScrollView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Extensions.swift"; sourceTree = "<group>"; };
 		5F14F47ED170A13EB7860EA3C02CE559 /* COExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "COExtensions-prefix.pch"; sourceTree = "<group>"; };
 		66B9EA26EFCB175E82C5AF9FE83E25B6 /* Localize-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Localize-Swift.xcconfig"; sourceTree = "<group>"; };
@@ -314,6 +329,7 @@
 				5548CC1B93FA9A428D73BF730E0E117E /* Int+Extensions.swift */,
 				A5DB0A76DE6DB579EB09DD4014A9B560 /* NSObject+Extensions.swift */,
 				455EFA44AB7A5A78086AE1A8242232FE /* String+Extensions.swift */,
+				5A5BB5D12269F1490036252E /* DateFormatter+Extensions.swift */,
 				95608B1AA1546B353C60FF8F644C8E2A /* UIBarbutton+Extensions.swift */,
 				2E703D415A9A79E0BA21CCE8F0946C4B /* UIButton+Extensions.swift */,
 				C79DE976BE73FDD561EA164FE0D0E58A /* UICollectionView+Extensions.swift */,
@@ -328,6 +344,8 @@
 				6CAD75691C8109501C63E12025EC3ED2 /* UIView+Extensions.swift */,
 				0AFFDF85F78AC77D44F12C1B75DAA3BD /* UIViewController+Extensions.swift */,
 				5A8D3803223B85F5007F722F /* UIScrollView + Extensions.swift */,
+				5A5BB5C72269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift */,
+				5A5BB5CC2269ED610036252E /* UICollectionViewCell+Extensions.swift */,
 			);
 			name = Extensions;
 			path = COExtensions/Classes/Extensions;
@@ -511,12 +529,21 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					460B91951417B5196E2AFB087CB5BD7A = {
+						LastSwiftMigration = 1020;
+					};
+					C83294BBDEB7CFA73A36AE023688A861 = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -538,10 +565,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B5F76232EA3056D7208F8FAE5B906E /* Localize-Swift-dummy.m in Sources */,
+				5A5BB5C92269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */,
 				A9E9D867377B802EEF5D75452CC8EB0C /* Localize.swift in Sources */,
 				2927CD0C34692621151FE62F8B7535DE /* String+LocalizeBundle.swift in Sources */,
 				63F5F3E582A7A7B09D874DC0CBBE6B1C /* String+LocalizedBundleTableName.swift in Sources */,
 				B982F873CEEC9F4CE75AA143C295B375 /* String+LocalizeTableName.swift in Sources */,
+				5A5BB5D32269F1490036252E /* DateFormatter+Extensions.swift in Sources */,
+				5A5BB5CE2269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +581,7 @@
 			files = (
 				08CDE3F46D632469A5B12D94BFE326C1 /* Alamofire+Extensions.swift in Sources */,
 				0501413680452EC4610D90BD01EA0C30 /* COExtensions-dummy.m in Sources */,
+				5A5BB5CD2269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */,
 				5C3F0DAB5D79F6863DE959C19F7EF40C /* DataPickerView.swift in Sources */,
 				ACEDFCDA8092D74BE1C942AF8A0B2FB2 /* Double+Extensions.swift in Sources */,
 				0488AA2C53DD357BED68A6E5414A5DC4 /* EZSwiftFunctions.swift in Sources */,
@@ -560,12 +591,14 @@
 				6E7BAE30FCE9FD9034925D8714F1A645 /* String+Extensions.swift in Sources */,
 				7C13E7C728ED7DA57CA1319D54444CDB /* UIBarbutton+Extensions.swift in Sources */,
 				85C9F498511FEC33A74F3779969DA05F /* UIButton+Extensions.swift in Sources */,
+				5A5BB5C82269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */,
 				89833E31A762CAC6AE97E8A334D7316A /* UICollectionView+Extensions.swift in Sources */,
 				EDC4389B3692A71910FA47738B1DC0C9 /* UIColor+Extensions.swift in Sources */,
 				E31A934AF5E4B5A84625FD8476A7625A /* UIDevice+Extensions.swift in Sources */,
 				27C6F01CAC4B3CBDB3D5AB211017B45E /* UIImageView+Extensions.swift in Sources */,
 				77153C23B56E1BD703BD3FC55906B053 /* UILabel+Extensions.swift in Sources */,
 				F84E175EEF40881689A1AAB49347062C /* UINavigationItem+Extensions.swift in Sources */,
+				5A5BB5D22269F1490036252E /* DateFormatter+Extensions.swift in Sources */,
 				C3C8E41A8B14D4D3269A0B3A9DF79107 /* UISegmentedControl+Extensions.swift in Sources */,
 				326BBE829F5E7F98C017C839268E8E96 /* UITableView+Extensions.swift in Sources */,
 				F8000E66238A8F2B1140369FF7CF8110 /* UITextField+Extensions.swift in Sources */,
@@ -579,6 +612,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6728CFB1C555CD696627687D6FF17B50 /* Pods-COExtensions_Example-dummy.m in Sources */,
+				5A5BB5CA2269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */,
+				5A5BB5D42269F1490036252E /* DateFormatter+Extensions.swift in Sources */,
+				5A5BB5CF2269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +623,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97B9C52B0DD3DF58C02099ACFA45670C /* Pods-COExtensions_Tests-dummy.m in Sources */,
+				5A5BB5CB2269EB3F0036252E /* UIActivityIndicatorView+Extensions.swift in Sources */,
+				5A5BB5D52269F1490036252E /* DateFormatter+Extensions.swift in Sources */,
+				5A5BB5D02269ED610036252E /* UICollectionViewCell+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +664,7 @@
 			baseConfigurationReference = 6A974197925C57CF9330F084ACF031DE /* Pods-COExtensions_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -649,6 +689,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -788,6 +829,7 @@
 			baseConfigurationReference = 57670189002E2417C3750F708DEE45BC /* Pods-COExtensions_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -810,6 +852,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -880,6 +923,7 @@
 			baseConfigurationReference = 69E40E7D097EDDE29105D11E05BA806E /* Pods-COExtensions_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -903,6 +947,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -948,6 +993,7 @@
 			baseConfigurationReference = 6FC76FB92E1619AD33AAE835826BCD56 /* Pods-COExtensions_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -970,6 +1016,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
