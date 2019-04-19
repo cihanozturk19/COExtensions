@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+public class Spinner:NSObject{
+    
+    static let shared = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    
+}
+extension UIActivityIndicatorView{
+    
+}
