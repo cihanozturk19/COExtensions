@@ -58,6 +58,90 @@ public extension UIView {
         }
     }
     
+    @IBInspectable var topCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = self.frame
+            rectShape.position = self.center
+            rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: newValue, height: newValue)).cgPath
+            
+            self.layer.mask = rectShape
+        }
+    }
+    
+    @IBInspectable var bottomCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = self.frame
+            rectShape.position = self.center
+            rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: newValue, height: newValue)).cgPath
+            
+            self.layer.mask = rectShape
+        }
+    }
+    
+    @IBInspectable var topLeftCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = self.frame
+            rectShape.position = self.center
+            rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topLeft], cornerRadii: CGSize(width: newValue, height: newValue)).cgPath
+            
+            self.layer.mask = rectShape
+        }
+    }
+    
+    @IBInspectable var topRightCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = self.frame
+            rectShape.position = self.center
+            rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topRight], cornerRadii: CGSize(width: newValue, height: newValue)).cgPath
+            
+            self.layer.mask = rectShape
+        }
+    }
+    
+    @IBInspectable var bottomLeftCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = self.frame
+            rectShape.position = self.center
+            rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.bottomLeft], cornerRadii: CGSize(width: newValue, height: newValue)).cgPath
+            
+            self.layer.mask = rectShape
+        }
+    }
+    
+    @IBInspectable var bottomRightCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = self.frame
+            rectShape.position = self.center
+            rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.bottomRight], cornerRadii: CGSize(width: newValue, height: newValue)).cgPath
+            
+            self.layer.mask = rectShape
+        }
+    }
+    
     @IBInspectable var leftCornerRadius: CGFloat {
         get {
             return layer.cornerRadius

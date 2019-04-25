@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UICollectionViewCell{
+public extension UICollectionViewCell{
     
     func addSpinner(_ color:UIColor? = nil){
         
@@ -22,7 +22,7 @@ extension UICollectionViewCell{
         Spinner.shared.removeFromSuperview()
     }
     
-    func cornerRadius(_ radius:CGFloat? = nil, borderWidth:CGFloat? = nil){
+    func addCornerRadius(_ radius:CGFloat? = nil, borderWidth:CGFloat? = nil){
         
         contentView.layer.cornerRadius = radius ?? 15
         contentView.layer.borderWidth = borderWidth ?? 1.0
