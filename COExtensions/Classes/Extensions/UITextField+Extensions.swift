@@ -21,6 +21,18 @@ extension UITextField {
     open func loadDropdownData(data: [String], defaultText:String, onSelect selectionHandler : @escaping (_ selectedText: String) -> Void) {
         self.inputView = DataPickerView(pickerData: data, dropdownField: self, defaultText:defaultText, onSelect: selectionHandler)
     }
+    
+    func setDatePicker(){
+        self.inputView = DatePickerView(dropdownField: self)
+    }
+    func setDatePickerWith(dropdownField: UITextField,toolBarTintColor:UIColor?,toolBarDoneButtonTitle:String?,toolBarCancelButtonTitle:String?,dateFormat:String?){
+        
+        self.inputView = DatePickerView(dropdownField: dropdownField, toolBarTintColor: toolBarTintColor, toolBarDoneButtonTitle: toolBarDoneButtonTitle, toolBarCancelButtonTitle: toolBarCancelButtonTitle, dateFormat: dateFormat)
+    }
+    func setDefaultTextField(){
+        self.inputView = nil
+        self.inputAccessoryView = nil
+    }
 }
 
 extension UITextField{

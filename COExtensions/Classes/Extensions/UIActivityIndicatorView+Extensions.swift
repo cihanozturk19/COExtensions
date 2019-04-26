@@ -10,8 +10,7 @@ import UIKit
 
 public class Spinner:NSObject{
     
-    static let shared = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-    
+    static let shared = UIActivityIndicatorView(style: .gray)
 }
 extension UIActivityIndicatorView{
     
