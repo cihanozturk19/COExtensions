@@ -22,14 +22,14 @@ extension UITextField {
         self.inputView = DataPickerView(pickerData: data, dropdownField: self, defaultText:defaultText, onSelect: selectionHandler)
     }
     
-    func setDatePicker(){
+    open func setDatePicker(){
         self.inputView = DatePickerView(dropdownField: self)
     }
-    func setDatePickerWith(dropdownField: UITextField,toolBarTintColor:UIColor?,toolBarDoneButtonTitle:String?,toolBarCancelButtonTitle:String?,dateFormat:String?){
+    open func setDatePickerWith(dropdownField: UITextField,toolBarTintColor:UIColor?,toolBarDoneButtonTitle:String?,toolBarCancelButtonTitle:String?,dateFormat:String?){
         
         self.inputView = DatePickerView(dropdownField: dropdownField, toolBarTintColor: toolBarTintColor, toolBarDoneButtonTitle: toolBarDoneButtonTitle, toolBarCancelButtonTitle: toolBarCancelButtonTitle, dateFormat: dateFormat)
     }
-    func setDefaultTextField(){
+    open func setDefaultTextField(){
         self.inputView = nil
         self.inputAccessoryView = nil
     }

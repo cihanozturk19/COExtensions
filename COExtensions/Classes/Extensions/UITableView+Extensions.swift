@@ -68,4 +68,17 @@ public extension UITableView{
         self.backgroundView = nil
     }
 }
+public extension UITableView{
+    
+    func getIndexPathFromTableView(_ view:UIView)->IndexPath{
+    
+        let point = self.convert(CGPoint.zero, from: view)
+    
+        guard let indexPath = self.indexPathForRow(at: point) else {
+            fatalError("can't find point in tableView")
+        }
+    
+        return indexPath
+    }
+}
 
