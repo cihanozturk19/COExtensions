@@ -7,19 +7,22 @@
 
 import Foundation
 import UIKit
+import Localize_Swift
 
 class DatePickerView: UIDatePicker {
     
     var pickerTextField : UITextField!
     var dateFormat:String!
     
-    init(dropdownField: UITextField,toolBarTintColor:UIColor? = .white,toolBarDoneButtonTitle:String? = "Tamam",toolBarCancelButtonTitle:String? = "İptal",dateFormat:String? = "dd.MM.yyyy") {
+    init(dropdownField: UITextField,toolBarTintColor:UIColor? = .white,toolBarDoneButtonTitle:String? = "Tamam",toolBarCancelButtonTitle:String? = "İptal",dateFormat:String? = "dd.MM.yyyy",pickerMode:UIDatePicker.Mode) {
+        
+        print("dropdownfield")
         
         self.pickerTextField = dropdownField
         self.dateFormat = dateFormat
         super.init(frame: CGRect.zero)
-        self.backgroundColor = UIColor.white
-        self.datePickerMode = UIDatePicker.Mode.date
+        self.backgroundColor = UIColor.red
+        self.datePickerMode = pickerMode
         //let date = Date()
         //let calendar = Calendar.current
         //let components = calendar.dateComponents([.year, .month, .day], from: date)
@@ -33,9 +36,9 @@ class DatePickerView: UIDatePicker {
         toolBar.sizeToFit()
         
         // Adding Button ToolBar
-        let doneButton = UIBarButtonItem(title: toolBarDoneButtonTitle, style: .plain, target: self, action: #selector(self.doneClick))
+        let doneButton = UIBarButtonItem(title: toolBarDoneButtonTitle?.localized(), style: .plain, target: self, action: #selector(self.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: toolBarCancelButtonTitle, style: .plain, target: self, action: #selector(self.cancelClick))
+        let cancelButton = UIBarButtonItem(title: toolBarCancelButtonTitle?.localized(), style: .plain, target: self, action: #selector(self.cancelClick))
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         self.pickerTextField.inputAccessoryView = toolBar

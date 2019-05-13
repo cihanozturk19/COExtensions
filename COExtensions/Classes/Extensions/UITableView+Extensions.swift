@@ -48,6 +48,13 @@ public extension UITableView{
         return genericCell
     }
     
+    func cellWithIdentifierNoneSelection<T:UITableViewCell>(cell:T.Type) -> T {
+        
+        let genericCell = self.dequeueReusableCell(withIdentifier: T.className) as! T
+        genericCell.selectionStyle = .none
+        return genericCell
+    }
+    
     func cellWithIdentifierAndIndexPath<T:UITableViewCell>(cell:T.Type,indexPath:IndexPath) -> T {
         
         let genericCell = self.dequeueReusableCell(withIdentifier: T.className, for: indexPath) as! T
@@ -81,4 +88,33 @@ public extension UITableView{
         return indexPath
     }
 }
+public extension UITableView{
+    
+    func tableHeaderView<T:UIView>(view:T.Type, _ width:CGFloat, _ radius:CGFloat? = 20, _ headerText:String, _ headerTextColor:String? = "333D47",_ headerTextFont:String? = "SourceSansPro-Bold", _ bgColorHex:String){
+        
+        let header = Bundle.main.loadNibNamed("\(view.self)", owner: nil, options: nil)!.first as! UIView
+        header.roundCorners(corners: [.topLeft, .topRight], radius: radius!,width: width)
+        header.backgroundColor = UIColor(hexString: bgColorHex)
 
+        let headerLabel = UILabel(frame: CGRect(x: 20, y: 0, width: header.frame.width - 40, height: header.frame.height))
+        headerLabel.font = UIFont(name: headerTextFont!, size: 18)
+        headerLabel.textColor = UIColor(hexString: headerTextColor!)
+        headerLabel.text = headerText
+        header.addSubview(headerLabel)
+        self.tableHeaderView = header
+    }
+    
+    func tableFooterView<T:UIView>(view:T.Type, _ width:CGFloat, _ radius:CGFloat? = 20, _ headerText:String, _ headerTextColor:String? = "333D47",_ headerTextFont:String? = "SourceSansPro-Bold", _ bgColorHex:String){
+        
+        let header = Bundle.main.loadNibNamed("\(view.self)", owner: nil, options: nil)!.first as! UIView
+        header.roundCorners(corners: [.bottomLeft, .bottomRight], radius: radius!,width: width)
+        header.backgroundColor = UIColor(hexString: bgColorHex)
+
+        let headerLabel = UILabel(frame: CGRect(x: 20, y: 0, width: header.frame.width - 40, height: header.frame.height))
+        headerLabel.font = UIFont(name: headerTextFont!, size: 18)
+        headerLabel.textColor = UIColor(hexString: headerTextColor!)
+        headerLabel.text = headerText
+        header.addSubview(headerLabel)
+        self.tableHeaderView = header
+    }
+}

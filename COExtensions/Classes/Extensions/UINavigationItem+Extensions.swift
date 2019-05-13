@@ -64,6 +64,7 @@ public extension UINavigationItem{
         imageView.image = UIImage(named:icon)
         self.titleView = imageView
     }
+   
 }
 
 //extension UINavigationBar {

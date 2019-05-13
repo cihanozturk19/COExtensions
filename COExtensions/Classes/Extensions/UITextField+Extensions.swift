@@ -22,13 +22,20 @@ extension UITextField {
         self.inputView = DataPickerView(pickerData: data, dropdownField: self, defaultText:defaultText, onSelect: selectionHandler)
     }
     
-    open func setDatePicker(){
-        self.inputView = DatePickerView(dropdownField: self)
+    open func setDatePicker(pickerMode:UIDatePicker.Mode){
+        self.inputView = DatePickerView(dropdownField: self, pickerMode:pickerMode)
     }
+
     open func setDatePickerWith(dropdownField: UITextField,toolBarTintColor:UIColor?,toolBarDoneButtonTitle:String?,toolBarCancelButtonTitle:String?,dateFormat:String?){
         
-        self.inputView = DatePickerView(dropdownField: dropdownField, toolBarTintColor: toolBarTintColor, toolBarDoneButtonTitle: toolBarDoneButtonTitle, toolBarCancelButtonTitle: toolBarCancelButtonTitle, dateFormat: dateFormat)
+        self.inputView = DatePickerView(dropdownField: dropdownField, toolBarTintColor: toolBarTintColor, toolBarDoneButtonTitle: toolBarDoneButtonTitle, toolBarCancelButtonTitle: toolBarCancelButtonTitle, dateFormat: dateFormat,pickerMode: .date)
     }
+    
+    open func setDateAndTimePickerWith(dropdownField: UITextField,toolBarTintColor:UIColor?,toolBarDoneButtonTitle:String?,toolBarCancelButtonTitle:String?,dateFormat:String?){
+        
+        self.inputView = DatePickerView(dropdownField: dropdownField, toolBarTintColor: toolBarTintColor, toolBarDoneButtonTitle: toolBarDoneButtonTitle, toolBarCancelButtonTitle: toolBarCancelButtonTitle, dateFormat: dateFormat,pickerMode: .dateAndTime)
+    }
+    
     open func setDefaultTextField(){
         self.inputView = nil
         self.inputAccessoryView = nil
