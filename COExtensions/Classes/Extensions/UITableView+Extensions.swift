@@ -90,29 +90,30 @@ public extension UITableView{
 }
 public extension UITableView{
     
-    func tableHeaderView<T:UIView>(view:T.Type, _ width:CGFloat, _ radius:CGFloat? = 20, _ headerText:String, _ headerTextColor:String? = "333D47",_ headerTextFont:String? = "SourceSansPro-Bold", _ bgColorHex:String){
+    func tableHeaderView<T:UIView>(view:T.Type, roundCornerWidth:CGFloat? = nil, radius:CGFloat? = nil, headerText:String,  headerTextColor:String? = nil , headerTextFont:String? = nil, bgColorHex:String){
         
         let header = Bundle.main.loadNibNamed("\(view.self)", owner: nil, options: nil)!.first as! UIView
-        header.roundCorners(corners: [.topLeft, .topRight], radius: radius!,width: width)
+        header.roundCorners(corners: [.topLeft, .topRight], radius: radius ?? 20,width: roundCornerWidth ?? self.frame.width )
         header.backgroundColor = UIColor(hexString: bgColorHex)
-
+        
         let headerLabel = UILabel(frame: CGRect(x: 20, y: 0, width: header.frame.width - 40, height: header.frame.height))
-        headerLabel.font = UIFont(name: headerTextFont!, size: 18)
-        headerLabel.textColor = UIColor(hexString: headerTextColor!)
+        headerLabel.font = UIFont(name: headerTextFont ?? "SourceSansPro-Bold", size: 18)
+        headerLabel.textColor = UIColor(hexString: headerTextColor ?? "333D47")
         headerLabel.text = headerText
         header.addSubview(headerLabel)
         self.tableHeaderView = header
     }
     
-    func tableFooterView<T:UIView>(view:T.Type, _ width:CGFloat, _ radius:CGFloat? = 20, _ headerText:String, _ headerTextColor:String? = "333D47",_ headerTextFont:String? = "SourceSansPro-Bold", _ bgColorHex:String){
+    func tableFooterView<T:UIView>(view:T.Type, roundCornerWidth:CGFloat? = nil, radius:CGFloat? = nil, headerText:String,  headerTextColor:String? = nil , headerTextFont:String? = nil, bgColorHex:String){
         
         let header = Bundle.main.loadNibNamed("\(view.self)", owner: nil, options: nil)!.first as! UIView
-        header.roundCorners(corners: [.bottomLeft, .bottomRight], radius: radius!,width: width)
+        header.roundCorners(corners: [.bottomLeft, .bottomRight], radius: radius ?? 20,width: roundCornerWidth ?? self.frame.width )
+
         header.backgroundColor = UIColor(hexString: bgColorHex)
 
         let headerLabel = UILabel(frame: CGRect(x: 20, y: 0, width: header.frame.width - 40, height: header.frame.height))
-        headerLabel.font = UIFont(name: headerTextFont!, size: 18)
-        headerLabel.textColor = UIColor(hexString: headerTextColor!)
+        headerLabel.font = UIFont(name: headerTextFont ?? "SourceSansPro-Bold", size: 18)
+        headerLabel.textColor = UIColor(hexString: headerTextColor ?? "333D47")
         headerLabel.text = headerText
         header.addSubview(headerLabel)
         self.tableHeaderView = header

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Localize_Swift
 
 class DatePickerView: UIDatePicker {
     
@@ -21,7 +20,7 @@ class DatePickerView: UIDatePicker {
         self.pickerTextField = dropdownField
         self.dateFormat = dateFormat
         super.init(frame: CGRect.zero)
-        self.backgroundColor = UIColor.red
+        self.backgroundColor = UIColor.white
         self.datePickerMode = pickerMode
         //let date = Date()
         //let calendar = Calendar.current
@@ -36,9 +35,9 @@ class DatePickerView: UIDatePicker {
         toolBar.sizeToFit()
         
         // Adding Button ToolBar
-        let doneButton = UIBarButtonItem(title: toolBarDoneButtonTitle?.localized(), style: .plain, target: self, action: #selector(self.doneClick))
+        let doneButton = UIBarButtonItem(title: toolBarDoneButtonTitle, style: .plain, target: self, action: #selector(self.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: toolBarCancelButtonTitle?.localized(), style: .plain, target: self, action: #selector(self.cancelClick))
+        let cancelButton = UIBarButtonItem(title: toolBarCancelButtonTitle, style: .plain, target: self, action: #selector(self.cancelClick))
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         self.pickerTextField.inputAccessoryView = toolBar
