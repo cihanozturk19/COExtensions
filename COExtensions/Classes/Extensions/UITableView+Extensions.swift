@@ -90,7 +90,7 @@ public extension UITableView{
 }
 public extension UITableView{
     
-    func tableHeaderView<T:UIView>(view:T.Type, roundCornerWidth:CGFloat? = nil, radius:CGFloat? = nil, headerText:String,  headerTextColor:String? = nil , headerTextFont:String? = nil, bgColorHex:String){
+    func addTableHeaderView<T:UIView>(view:T.Type, roundCornerWidth:CGFloat? = nil, radius:CGFloat? = nil, headerText:String,  headerTextColor:String? = nil , headerTextFont:String? = nil, bgColorHex:String){
         
         let header = Bundle.main.loadNibNamed("\(view.self)", owner: nil, options: nil)!.first as! UIView
         header.roundCorners(corners: [.topLeft, .topRight], radius: radius ?? 20,width: roundCornerWidth ?? self.frame.width )
@@ -104,18 +104,18 @@ public extension UITableView{
         self.tableHeaderView = header
     }
     
-    func tableFooterView<T:UIView>(view:T.Type, roundCornerWidth:CGFloat? = nil, radius:CGFloat? = nil, headerText:String,  headerTextColor:String? = nil , headerTextFont:String? = nil, bgColorHex:String){
+    func addTableFooterView<T:UIView>(view:T.Type, roundCornerWidth:CGFloat? = nil, radius:CGFloat? = nil, headerText:String,  headerTextColor:String? = nil , headerTextFont:String? = nil, bgColorHex:String){
         
-        let header = Bundle.main.loadNibNamed("\(view.self)", owner: nil, options: nil)!.first as! UIView
-        header.roundCorners(corners: [.bottomLeft, .bottomRight], radius: radius ?? 20,width: roundCornerWidth ?? self.frame.width )
+        let footer = Bundle.main.loadNibNamed("\(view.self)", owner: nil, options: nil)!.first as! UIView
+        footer.roundCorners(corners: [.bottomLeft, .bottomRight], radius: radius ?? 20,width: roundCornerWidth ?? self.frame.width )
 
-        header.backgroundColor = UIColor(hexString: bgColorHex)
+        footer.backgroundColor = UIColor(hexString: bgColorHex)
 
-        let headerLabel = UILabel(frame: CGRect(x: 20, y: 0, width: header.frame.width - 40, height: header.frame.height))
-        headerLabel.font = UIFont(name: headerTextFont ?? "SourceSansPro-Bold", size: 18)
-        headerLabel.textColor = UIColor(hexString: headerTextColor ?? "333D47")
-        headerLabel.text = headerText
-        header.addSubview(headerLabel)
-        self.tableHeaderView = header
+        let footerLabel = UILabel(frame: CGRect(x: 20, y: 0, width: footer.frame.width - 40, height: footer.frame.height))
+        footerLabel.font = UIFont(name: headerTextFont ?? "SourceSansPro-Bold", size: 18)
+        footerLabel.textColor = UIColor(hexString: headerTextColor ?? "333D47")
+        footerLabel.text = headerText
+        footer.addSubview(footerLabel)
+        self.tableFooterView = footer
     }
 }
